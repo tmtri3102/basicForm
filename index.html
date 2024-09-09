@@ -6,7 +6,124 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
+		<style>
+			body {
+				font-family: "Lucida Grande", "Lucida Sans Unicode", "Tahoma",
+					sans-serif;
+				max-width: 250px;
+			}
+			form div {
+				display: flex;
+				flex-direction: column;
+				row-gap: 12px;
+				font-weight: bolder;
+				margin-bottom: 16px;
+			}
+			#phone {
+				width: 48px;
+			}
+		</style>
 		<title>Document</title>
 	</head>
-	<body></body>
+	<body>
+		<h2>Order Form</h2>
+		<form action="#">
+			<div>
+				<label for="item-dropdown">What world you like to buy</label>
+
+				<select
+					name="items"
+					id="item-dropdown"
+					style="max-width: 70px"
+				>
+					<option value="A">A</option>
+				</select>
+			</div>
+
+			<div>
+				<label for="amount">How many would you like to buy</label>
+				<label for="amount"
+					><input
+						type="radio"
+						name="sm"
+						id="amount"
+					/>1 - $10</label
+				>
+
+				<label for="amount"
+					><input
+						type="radio"
+						name="m"
+						id="amount"
+					/>2 - $20</label
+				>
+
+				<label for="amount"
+					><input
+						type="radio"
+						name="m"
+						id="amount"
+					/>3 - $25</label
+				>
+			</div>
+
+			<div>
+				<label for="name">Name<span style="color: red">*</span></label>
+				<input
+					type="text"
+					name="FirstName"
+					placeholder="FirstName"
+					id="name"
+					required
+				/>
+				<input
+					type="text"
+					placeholder="LastName"
+					name="LastName"
+					id="name"
+					required
+				/>
+			</div>
+
+			<div>
+				<label for="email">Email</label>
+				<input
+					type="email"
+					name="email"
+					id="email"
+				/>
+			</div>
+
+			<div>
+				<label for="phone">Phone Number</label>
+				<div style="display: flex; flex-direction: row; column-gap: 8px">
+					<input
+						type="text"
+						id="phone"
+						name="phone1"
+						maxlength="3"
+					/>
+					–
+					<input
+						type="text"
+						id="phone"
+						name="phone2"
+						maxlength="3"
+					/>
+					–
+					<input
+						type="text"
+						id="phone"
+						name="phone3"
+						maxlength="4"
+					/>
+				</div>
+			</div>
+
+			<input
+				type="submit"
+				value="Submit"
+			/>
+		</form>
+	</body>
 </html>
